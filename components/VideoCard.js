@@ -4,7 +4,7 @@ import { Video } from 'expo-av';
 import { useFocusEffect } from '@react-navigation/native';
 import { AntDesign, Ionicons, Feather } from '@expo/vector-icons';
 import { supabase } from '../utils/supabase';
-import ActionBar from './ActionBar';
+import ActionStack from './ActionStack';
 import CommentsModal from './CommentsModal'; // Import the new CommentsModal
 
 const { height, width } = Dimensions.get('window');
@@ -219,7 +219,7 @@ function VideoCard({ item, index, currentVideoIndex, navigation }) {
       )}
 
       {/* Action Bar */}
-      <ActionBar
+      <ActionStack
         post={item}
         hasLiked={hasLiked}
         localLikeCount={localLikeCount}
@@ -253,7 +253,7 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     justifyContent: 'flex-end', // Aligns content to the bottom
     paddingHorizontal: 15,
-    paddingBottom: 150, // Space for the bottom nav bar + ActionBar
+    paddingBottom: 150, // Space for the bottom nav bar + ActionStack
     flexDirection: 'row', // To position left and right content
     alignItems: 'flex-end', // Align items to the bottom of the container
   },
