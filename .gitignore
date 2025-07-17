@@ -48,3 +48,4 @@ node_modules
 .expo-shared
 *.log
 .env
+package-lock.json
